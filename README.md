@@ -1,7 +1,9 @@
 # cloud-run-policies
 
 ## Description
-sample description
+This is an example repository demonstrating the use of the Kpt gatekeeper function to prevent the deployment of a KCC based Cloud Run instance from deploying with a disallowed container.
+
+This is a modification of the [k8s-allowed-repo](https://github.com/open-policy-agent/gatekeeper-library/tree/master/library/general/allowedrepos) policy.
 
 ## Usage
 
@@ -15,7 +17,5 @@ Details: https://kpt.dev/reference/cli/pkg/tree/
 
 ### Apply the package
 ```
-kpt live init cloud-run-policies
-kpt live apply cloud-run-policies --reconcile-timeout=2m --output=table
+kpt fn render
 ```
-Details: https://kpt.dev/reference/cli/live/
