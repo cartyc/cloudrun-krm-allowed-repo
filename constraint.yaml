@@ -1,0 +1,13 @@
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: CRAllowedRepos
+metadata:
+  name: repo-is-allowed
+spec:
+  enforcementAction: deny
+  match:
+    kinds:
+      - apiGroups: ["*"]
+        kinds: ["RunService"]
+  parameters:
+    repos:
+      - "allowedrepo/"
